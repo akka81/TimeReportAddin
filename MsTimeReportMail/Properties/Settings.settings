@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MsTimeReportMail.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ToRecipient" Type="System.String" Scope="User">
+      <Value Profile="(Default)">eleonora.baviera@microsoft.com;a-homujy@microsoft.com</Value>
+    </Setting>
+    <Setting Name="CcRecipient" Type="System.String" Scope="User">
+      <Value Profile="(Default)">andrea.bombelli@reti.it</Value>
+    </Setting>
+    <Setting Name="Body" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ciao, &lt;br/&gt; ecco il time report della settimana.</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
