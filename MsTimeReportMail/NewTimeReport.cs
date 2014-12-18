@@ -7,6 +7,7 @@ using Outlook = Microsoft.Office.Interop.Outlook;
 using Microsoft.Office.Interop.Outlook;
 using dialog =  System.Windows.Forms;
 using System.Globalization;
+using System.Windows.Forms;
 
 namespace MsTimeReportMail
 {
@@ -27,24 +28,27 @@ namespace MsTimeReportMail
             dialog.OpenFileDialog attachment = new dialog.OpenFileDialog();
             attachment.Title = "Select files to send";
             attachment.Multiselect = true;
-            attachment.ShowDialog();
+            DialogResult res =  attachment.ShowDialog();
 
-            if(attachment.FileNames.Length > 0)
+            if (res == DialogResult.OK)
             {
-                foreach (string file in attachment.FileNames)
+                if (attachment.FileNames.Length > 0)
                 {
-                    myMailItem.Attachments.Add(file,Outlook.OlAttachmentType.olByValue,1,file);
+                    foreach (string file in attachment.FileNames)
+                    {
+                        myMailItem.Attachments.Add(file, Outlook.OlAttachmentType.olByValue, 1, file);
+                    }
                 }
+                //setting mail properties
+                string subjectFormat = "{0} - {1}a {2} {3}";
+                myMailItem.To = Properties.Settings.Default["ToRecipient"].ToString();
+                myMailItem.CC = Properties.Settings.Default["CcRecipient"].ToString();
+                myMailItem.Subject = string.Format(subjectFormat, currentUser.Name, GetWeekNumberinCurrentMonth(), DateTime.Now.ToString("MMMM", CultureInfo.GetCultureInfo("it-IT")), DateTime.Now.Year);
+                myMailItem.BodyFormat = OlBodyFormat.olFormatHTML;
+                myMailItem.HTMLBody = Properties.Settings.Default["Body"].ToString();
+                //open mail message
+                myMailItem.Display(true);
             }
-            //setting mail properties
-            string subjectFormat = "{0} - {1}a {2} {3}";
-            myMailItem.To = Properties.Settings.Default["ToRecipient"].ToString();
-            myMailItem.CC = Properties.Settings.Default["CcRecipient"].ToString();
-            myMailItem.Subject =string.Format(subjectFormat,currentUser.Name, GetWeekNumberinCurrentMonth(), DateTime.Now.ToString("MMMM",CultureInfo.GetCultureInfo("it-IT")),DateTime.Now.Year);
-            myMailItem.BodyFormat = OlBodyFormat.olFormatHTML;
-            myMailItem.HTMLBody = Properties.Settings.Default["Body"].ToString();
-            //open mail message
-            myMailItem.Display(true);
         }
 
         private void button2_Click(object sender, RibbonControlEventArgs e)
