@@ -138,30 +138,7 @@ namespace MsTimeReportMail.Properties {
             "><i>_user_</i><o:p></o:p></span></p></td><td nowrap valign=top style=\'border-top" +
             ":none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid #" +
             "9BC2E6 1.0pt;background:#DDEBF7;padding:0cm 3.5pt 0cm 3.5pt;height:10.05pt\'></td" +
-            "></tr><tr style=\'height:10.05pt\'><td nowrap valign=bottom style=\'border-top:none" +
-            ";border-left:solid #9BC2E6 1.0pt;border-bottom:solid windowtext 1.0pt;border-rig" +
-            "ht:solid windowtext 1.0pt;background:#DDEBF7;padding:0cm 3.5pt 0cm 3.5pt;height:" +
-            "10.05pt\'><p class=MsoNormal><i>_date6_</i><span style=\'font-size:10.0pt;font-fam" +
-            "ily:\"Calibri\",sans-serif\'><o:p></o:p></span></p></td><td nowrap valign=bottom st" +
-            "yle=\'border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;borde" +
-            "r-right:solid windowtext 1.0pt;background:#DDEBF7;padding:0cm 3.5pt 0cm 3.5pt;he" +
-            "ight:10.05pt\'><p class=MsoNormal><span style=\'font-size:10.0pt;font-family:\"Cali" +
-            "bri\",sans-serif\'><i>_user_</i><o:p></o:p></span></p></td><td nowrap valign=top s" +
-            "tyle=\'border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;bord" +
-            "er-right:solid #9BC2E6 1.0pt;background:#DDEBF7;padding:0cm 3.5pt 0cm 3.5pt;heig" +
-            "ht:10.05pt\'><p class=MsoNormal style=\'mso-margin-top-alt:auto;mso-margin-bottom-" +
-            "alt:auto\'><span style=\'font-size:8.0pt;font-family:\"Tahoma\",sans-serif;color:bla" +
-            "ck\'>&nbsp;</span><o:p></o:p></p></td></tr><tr style=\'height:10.05pt\'><td nowrap " +
-            "valign=bottom style=\'border-top:none;border-left:solid #9BC2E6 1.0pt;border-bott" +
-            "om:solid #9BC2E6 1.0pt;border-right:solid windowtext 1.0pt;background:#DDEBF7;pa" +
-            "dding:0cm 3.5pt 0cm 3.5pt;height:10.05pt\'><p class=MsoNormal><i>_date7_</i><o:p>" +
-            "</o:p></p></td><td nowrap valign=bottom style=\'border-top:none;border-left:none;" +
-            "border-bottom:solid #9BC2E6 1.0pt;border-right:solid windowtext 1.0pt;background" +
-            ":#DDEBF7;padding:0cm 3.5pt 0cm 3.5pt;height:10.05pt\'><p class=MsoNormal><span st" +
-            "yle=\'font-size:10.0pt;font-family:\"Calibri\",sans-serif\'><i>_user_</i><o:p></o:p>" +
-            "</span></p></td><td nowrap valign=top style=\'border-top:none;border-left:none;bo" +
-            "rder-bottom:solid #9BC2E6 1.0pt;border-right:solid #9BC2E6 1.0pt;background:#DDE" +
-            "BF7;padding:0cm 3.5pt 0cm 3.5pt;height:10.05pt\'></td></tr></table>")]
+            "></tr></table>")]
         public string WorkTable {
             get {
                 return ((string)(this["WorkTable"]));

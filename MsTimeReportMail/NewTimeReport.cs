@@ -52,7 +52,7 @@ namespace MsTimeReportMail
                 workTable = workTable.Replace("_user_", string.Format("{0} {1}", currentUser.FirstName, currentUser.LastName));
 
                 List<DateTime> WeekDates = GetWeekDates();
-                for (int i = 1; i <= 7; i++)
+                for (int i = 1; i <= 5; i++)
                 {
                     workTable = workTable.Replace(string.Format("_date{0}_", i), WeekDates[i - 1].ToShortDateString());
                 }
