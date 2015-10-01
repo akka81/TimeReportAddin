@@ -5,16 +5,40 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsTimeReportMail", "MsTimeReportMail\MsTimeReportMail.csproj", "{7DE8CA40-4837-4335-A753-F2799FA4283F}"
 EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "TimeReportAddinSetup", "TimeReportAddinSetup\TimeReportAddinSetup.isproj", "{A665E187-3114-4F97-AE86-2A44DF7BBC07}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7DE8CA40-4837-4335-A753-F2799FA4283F} = {7DE8CA40-4837-4335-A753-F2799FA4283F}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
 		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DE8CA40-4837-4335-A753-F2799FA4283F}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE8CA40-4837-4335-A753-F2799FA4283F}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{7DE8CA40-4837-4335-A753-F2799FA4283F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7DE8CA40-4837-4335-A753-F2799FA4283F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE8CA40-4837-4335-A753-F2799FA4283F}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE8CA40-4837-4335-A753-F2799FA4283F}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
 		{7DE8CA40-4837-4335-A753-F2799FA4283F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DE8CA40-4837-4335-A753-F2799FA4283F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DE8CA40-4837-4335-A753-F2799FA4283F}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE8CA40-4837-4335-A753-F2799FA4283F}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.Debug|Any CPU.ActiveCfg = DVD-5
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.Debug|Any CPU.Build.0 = DVD-5
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.DVD-5|Any CPU.Build.0 = DVD-5
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.Release|Any CPU.ActiveCfg = SingleImage
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.Release|Any CPU.Build.0 = SingleImage
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{A665E187-3114-4F97-AE86-2A44DF7BBC07}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
