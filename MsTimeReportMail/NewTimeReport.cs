@@ -47,7 +47,7 @@ namespace MsTimeReportMail
             myMailItem.BodyFormat = OlBodyFormat.olFormatHTML;
 
             myMailItem.HTMLBody = Properties.Settings.Default["Body"].ToString();
-
+            //
             //creating worktable
             string workTable = Properties.Settings.Default["WorkTable"].ToString();
             workTable = workTable.Replace("_user_", string.Format("{0} {1}", currentUser.FirstName, currentUser.LastName));
