@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Office.Tools.Ribbon;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using Microsoft.Office.Interop.Outlook;
-using dialog =  System.Windows.Forms;
+using dialog = System.Windows.Forms;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -30,38 +30,39 @@ namespace MsTimeReportMail
             //attachment.Multiselect = true;
             //DialogResult res =  attachment.ShowDialog();
 
-  //          if (res == DialogResult.OK)
-//            {
-               // if (attachment.FileNames.Length > 0)
-               // {
-                    //foreach (string file in attachment.FileNames)
-                    //{
-                      //  myMailItem.Attachments.Add(file, Outlook.OlAttachmentType.olByValue, 1, file);
-                  //  }
-                //}
-                //setting mail properties
-                string subjectFormat = "{0} - {1}a {2} {3}";
-                myMailItem.To = Properties.Settings.Default["ToRecipient"].ToString();
-                myMailItem.CC = Properties.Settings.Default["CcRecipient"].ToString();
-                myMailItem.Subject = string.Format(subjectFormat, currentUser.Name, GetWeekNumberinCurrentMonth(), DateTime.Now.ToString("MMMM", CultureInfo.GetCultureInfo("it-IT")), DateTime.Now.Year);
-                myMailItem.BodyFormat = OlBodyFormat.olFormatHTML;
-                myMailItem.HTMLBody = Properties.Settings.Default["Body"].ToString();
-              
-                //creating worktable
-                string workTable = Properties.Settings.Default["WorkTable"].ToString();
-                workTable = workTable.Replace("_user_", string.Format("{0} {1}", currentUser.FirstName, currentUser.LastName));
+            //          if (res == DialogResult.OK)
+            //            {
+            // if (attachment.FileNames.Length > 0)
+            // {
+            //foreach (string file in attachment.FileNames)
+            //{
+            //  myMailItem.Attachments.Add(file, Outlook.OlAttachmentType.olByValue, 1, file);
+            //  }
+            //}
+            //setting mail properties
+            string subjectFormat = "{0} - {1}a {2} {3}";
+            myMailItem.To = Properties.Settings.Default["ToRecipient"].ToString();
+            myMailItem.CC = Properties.Settings.Default["CcRecipient"].ToString();
+            myMailItem.Subject = string.Format(subjectFormat, currentUser.Name, GetWeekNumberinCurrentMonth(), DateTime.Now.ToString("MMMM", CultureInfo.GetCultureInfo("it-IT")), DateTime.Now.Year);
+            myMailItem.BodyFormat = OlBodyFormat.olFormatHTML;
 
-                List<DateTime> WeekDates = GetWeekDates();
-                for (int i = 1; i <= 5; i++)
-                {
-                    workTable = workTable.Replace(string.Format("_date{0}_", i), WeekDates[i - 1].ToShortDateString());
-                }
+            myMailItem.HTMLBody = Properties.Settings.Default["Body"].ToString();
+
+            //creating worktable
+            string workTable = Properties.Settings.Default["WorkTable"].ToString();
+            workTable = workTable.Replace("_user_", string.Format("{0} {1}", currentUser.FirstName, currentUser.LastName));
+
+            List<DateTime> WeekDates = GetWeekDates();
+            for (int i = 1; i <= 5; i++)
+            {
+                workTable = workTable.Replace(string.Format("_date{0}_", i), WeekDates[i - 1].ToString("dd/MM/yyyy"));
+            }
 
 
-                myMailItem.HTMLBody += workTable;
-                //open mail message
-                myMailItem.Display(true);
-           // }
+            myMailItem.HTMLBody += workTable;
+            //open mail message
+            myMailItem.Display(true);
+            // }
         }
 
         private void button2_Click(object sender, RibbonControlEventArgs e)
@@ -76,8 +77,8 @@ namespace MsTimeReportMail
         {
 
             Calendar gc = CultureInfo.CurrentCulture.Calendar;
-            int yearweek  = gc.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
-            int firstmonthweek = gc.GetWeekOfYear(new DateTime(DateTime.Now.Year,DateTime.Now.Month,1), CalendarWeekRule.FirstDay, DayOfWeek.Monday);
+            int yearweek = gc.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
+            int firstmonthweek = gc.GetWeekOfYear(new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1), CalendarWeekRule.FirstDay, DayOfWeek.Monday);
 
             return yearweek - firstmonthweek + 1;
         }
@@ -87,7 +88,7 @@ namespace MsTimeReportMail
             List<DateTime> weekdates = new List<DateTime>();
             try
             {
-                
+
                 switch (DateTime.Now.DayOfWeek)
                 {
                     case DayOfWeek.Monday:
@@ -160,7 +161,7 @@ namespace MsTimeReportMail
             catch (System.Exception ex)
             { }
             return weekdates;
-                
+
         }
     }
 }
