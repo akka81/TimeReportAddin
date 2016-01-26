@@ -1,5 +1,5 @@
 # TimeReportAddin
-Outlook 2013 addin to send mail with a custom template
+Outlook 2013/2016 addin to send mail with a custom template
 
 Instructions:
 
