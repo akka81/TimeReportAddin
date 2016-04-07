@@ -340,8 +340,12 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{2B96C668-8475-4206-B2B1-D966619902CD}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.Common.dll</td><td>{BC4C5AE3-3025-4745-9ED0-4E817E357020}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.Outlook.dll</td><td>{D36A3465-442B-4A45-9D6A-4054E30C3E59}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.outlo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.dll</td><td>{8C1A923A-336B-4846-8C7D-9CA333EEE198}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>{51B1E165-38CF-4A09-8C0B-EDA27E2298E9}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.visualstudio.tools</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MsTimeReportMail.Primary_output</td><td>{E29A3552-1D94-4958-BC1F-09AF041A922D}</td><td>INSTALLDIR</td><td>2</td><td/><td>mstimereportmail.primary_out</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MsTimeReportMail.Content_Files</td><td>{4F178C6D-4EAC-4D7A-AEC1-98568A5C07E3}</td><td>INSTALLDIR</td><td>2</td><td/><td>mstimereportmail.content_fil</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MsTimeReportMail.Primary_output1</td><td>{EF3647E1-D52D-4563-B9E2-7E34EACDEDD1}</td><td>INSTALLDIR</td><td>2</td><td/><td>mstimereportmail.primary_out1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1051,8 +1055,12 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.Common.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.Outlook.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td></row>
-		<row><td>INSTALLDIR</td><td>MsTimeReportMail.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>MsTimeReportMail.Content_Files</td></row>
+		<row><td>INSTALLDIR</td><td>MsTimeReportMail.Primary_output1</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1861,8 +1869,12 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.Common.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.Outlook.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td></row>
-		<row><td>AlwaysInstall</td><td>MsTimeReportMail.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>MsTimeReportMail.Content_Files</td></row>
+		<row><td>AlwaysInstall</td><td>MsTimeReportMail.Primary_output1</td></row>
 	</table>
 
 	<table name="File">
@@ -1877,9 +1889,13 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>microsoft.office.tools.commo</td><td>Microsoft.Office.Tools.Common.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Progetti\Outlook\TimeReportAddin\MsTimeReportMail\bin\Debug\Microsoft.Office.Tools.Common.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.dll</td><td>Microsoft.Office.Tools.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Progetti\Outlook\TimeReportAddin\MsTimeReportMail\bin\Release\Microsoft.Office.Tools.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.outlo</td><td>Microsoft.Office.Tools.Outlook.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.Outlook.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Progetti\Outlook\TimeReportAddin\MsTimeReportMail\bin\Debug\Microsoft.Office.Tools.Outlook.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.visualstudio.tools</td><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>MICROS~1.DLL|Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Progetti\Outlook\TimeReportAddin\MsTimeReportMail\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>1</td><td/></row>
+		<row><td>mstimereportmail.content_fil</td><td>MsTimeReportMail.Content_Files</td><td>MsTimeReportMail.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;MsTimeReportMail&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>mstimereportmail.dll.manifes</td><td>ISX_DEFAULTCOMPONENT</td><td>MSTIME~1.MAN|MsTimeReportMail.dll.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Progetti\Outlook\TimeReportAddin\MsTimeReportMail\bin\Release\MsTimeReportMail.dll.manifest</td><td>1</td><td/></row>
-		<row><td>mstimereportmail.primary_out</td><td>MsTimeReportMail.Primary_output</td><td>MsTimeReportMail.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;MsTimeReportMail&gt;|Built</td><td>3</td><td/></row>
+		<row><td>mstimereportmail.primary_out1</td><td>MsTimeReportMail.Primary_output1</td><td>MsTimeReportMail.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;MsTimeReportMail&gt;|Built</td><td>3</td><td/></row>
 		<row><td>mstimereportmail.vsto</td><td>ISX_DEFAULTCOMPONENT</td><td>MSTIME~1.VST|MsTimeReportMail.vsto</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Progetti\Outlook\TimeReportAddin\MsTimeReportMail\bin\Release\MsTimeReportMail.vsto</td><td>1</td><td/></row>
 	</table>
 
@@ -2023,8 +2039,12 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_D490760D_12B6_4DFA_B978_41A350DA6399_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.Common.dll</td><td/><td/><td>_26BB799A_7042_45E0_8540_FEE850515C51_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.Outlook.dll</td><td/><td/><td>_375FBD5A_85BD_4BE1_A50D_99CC0F5E81E8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.dll</td><td/><td/><td>_53F6BE6D_1C41_4A05_AB67_C86756095404_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td/><td/><td>_122D6D28_FCDE_4B7D_ACBD_956CFCD7409E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MsTimeReportMail.Primary_output</td><td/><td/><td>_AEF37370_4397_4D97_AA2B_DE0E360317D2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MsTimeReportMail.Content_Files</td><td/><td/><td>_39C9F7EE_2250_4958_B937_9C2DC14CAF46_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MsTimeReportMail.Primary_output1</td><td/><td/><td>_31F9DD97_B336_4350_90A1_8D6DEEBB530F_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2613,7 +2633,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>AkkaWare</td><td>0</td><td/><td>220451182</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>AkkaWare</td><td>0</td><td/><td>765692110</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>220440814</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>220440814</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>220440814</td></row>
@@ -3714,8 +3734,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>220440814</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>220440814</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>220442862</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>https://github.com/akka81/TimeReportAddin</td><td>0</td><td/><td>220436878</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>AkkaWare</td><td>0</td><td/><td>220451182</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.AkkaWare.com</td><td>0</td><td/><td>765692110</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>AkkaWare</td><td>0</td><td/><td>765692110</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>220440814</td></row>
 	</table>
 
@@ -3962,7 +3982,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{99B01E39-C7A7-48A0-997A-878CBA2292BD}</td></row>
 		<row><td>ISUSSignature</td><td>{90274CA0-5A52-4162-B717-99E626313CA8}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewAppFiles,viewCustomActions</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewAppFiles,viewCustomActions,viewRelease,viewSystemSearch,viewObjects</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
